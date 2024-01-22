@@ -66,7 +66,7 @@ class VerilatedSnapshot final : public VerilatedSerialize {
 	///
 	/// This is especially useful, if you want to start using a snapshot across
 	/// multiple threads.
-    VerilatedSnapshot(const VerilatedSnapshot& cpy) {
+    VerilatedSnapshot(VerilatedSnapshot& cpy) {
 		m_bufp = cpy.bufferStart();
 		m_cp = cpy.bufferStart();
 		m_endp = cpy.bufferEnd();
